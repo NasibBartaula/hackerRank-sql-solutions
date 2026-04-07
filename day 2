@@ -1,0 +1,10 @@
+select round(sqrt(pow((t.b-t.a),2)+pow((t.d-t.c),2)),4) FROM
+(
+    select 
+min(lat_n)as a,
+max(lat_n)as b ,
+min(long_w)as c,
+max(long_w)as d
+from station
+) as t
+;
